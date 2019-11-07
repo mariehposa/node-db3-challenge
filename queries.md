@@ -14,8 +14,10 @@ select p.ProductName, od.quantity from OrderDetails as od join products as p on 
 
 ### Display the OrderID, CustomerName and the employee's LastName for every order. All columns should be labeled clearly. Displays 196 records.
 
-select o.orderID, c.CustomerName as "Customer's Name", e.LastName as "Employee's Surname" from ((orders as o join customers as c on o.customerID = c.customerID) join employees as e on o.employeeID = e.employeeID)
+select o.orderID, c.CustomerName as "Customer's Name", e.LastName as "Employee's Lastname" from ((orders as o join customers as c on o.customerID = c.customerID) join employees as e on o.employeeID = e.employeeID)
 
 ### (Stretch)  Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 9 records.
+
+select catagoryName 
 
 ### (Stretch) Display OrderID and a  column called ItemCount that shows the total number of products placed on the order. Shows 196 records. 

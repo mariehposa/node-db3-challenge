@@ -68,7 +68,7 @@ router.post('/:id/steps', (req, res) => {
       Schemes.addStep(stepData, id)
       .then(step => {
         res.status(201).json(step);
-      })
+      }).catch(err => res.status(500).json({message: err.message}))
     } else {
       res.status(404).json({ message: 'Could not find scheme with given id.' })
     }
